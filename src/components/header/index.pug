@@ -1,0 +1,14 @@
+header.header
+    .header__left
+        .header__logo
+            a(href="/")
+                img(src="/images/content/logo.svg" alt="lorem")
+    .header__center
+        .header__menu
+            each i in menu
+                a(href=i.href).header__item= i.name
+    .header__left
+        .header__btns
+            a(href=phone.href).header__btn= phone.val
+            button(type='button').header__btn Связаться
+
