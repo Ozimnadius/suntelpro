@@ -1,0 +1,40 @@
+.accept{
+
+  &__input{
+    display: none;
+    &:checked+.accept__fake{
+      .accept{
+        &__check{
+          svg{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__fake{
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+  }
+
+  &__check{
+    width: 18px;
+    height: 18px;
+    border: 1px solid $btn;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+      display: none;
+    }
+  }
+
+  &__txt{
+    color: rgba($white,.8);
+    font-size: 14px;
+  }
+}

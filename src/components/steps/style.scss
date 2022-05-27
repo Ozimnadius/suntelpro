@@ -1,0 +1,97 @@
+.steps{
+  padding-top: 120px;
+  padding-bottom: 140px;
+
+  &__title{
+    margin-bottom: 90px;
+  }
+
+  &__list{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 110px 30px;
+
+    counter-reset: li;
+  }
+
+  &__item{
+    &--2{
+      grid-column: span 2;
+    }
+  }
+}
+
+.step{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__top{
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+    margin-bottom: 10px;
+
+    svg{
+      width: 190px;
+      height: 8px;
+    }
+
+    &:before{
+      content: '0'counter(li);
+      counter-increment: li;
+      color: $btn;
+      font-size: 96px;
+      line-height: 1;
+    }
+  }
+
+  &__bottom{
+    padding-right: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name{
+    color: $btn;
+    font-size: 24px;
+    height: 90px;
+    line-height: 1.125;
+  }
+
+  &__desc{
+    max-width: 340px;
+    color: $white;
+    font-size: 18px;
+    margin-bottom: auto;
+  }
+
+  &__btn{
+    width: 325px;
+    height: 61px;
+    border-radius: 3px;
+    border: 1px solid $btn;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+
+    color: $btn;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__download{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 61px;
+
+    color: $btn;
+    font-size: 18px;
+  }
+
+}

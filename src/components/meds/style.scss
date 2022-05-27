@@ -1,0 +1,63 @@
+.meds{
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  &__title{
+    margin-bottom: 120px;
+  }
+
+  &__list{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px 20px;
+    margin-bottom: 90px;
+  }
+
+  &__item{
+    display:grid;
+    grid-template-columns: 70px 1fr;
+    gap: 30px;
+  }
+
+  &__img{
+    img{
+      display: block;
+    }
+  }
+
+  &__txt{
+    font-size: 20px;
+  }
+
+  &__bottom{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding-right: 75px;
+  }
+
+  &__sub{
+    font-size: 32px;
+    max-width: 797px;
+  }
+
+  &__quote{
+    color: $btn;
+    font-size: 32px;
+    text-align: center;
+    background-image: linear-gradient(0deg, $btn, $btn 6.25%, transparent 6.25%, transparent 18.75%, $btn 18.75%,$btn 31.25%,transparent 31.25%,transparent 43.75%,$btn 43.75%,$btn 56.25%,transparent 56.25%,transparent 68.75%,$btn 68.75%,$btn 81.25%,transparent 81.25%,transparent 93.75%,$btn 93.75%,$btn 100%),
+    linear-gradient(90deg,$btn,$btn 1.4705882352941178%, transparent 1.4705882352941178%,transparent 4.411764705882353%, $btn 4.411764705882353%,$btn 7.352941176470589%, transparent 7.352941176470589%,transparent 10.294117647058824%, $btn 10.294117647058824%,$btn 13.23529411764706%, transparent 13.23529411764706%,transparent 16.176470588235297%, $btn 16.176470588235297%,$btn 19.117647058823533%, transparent 19.117647058823533%,transparent 22.058823529411768%, $btn 22.058823529411768%,$btn 25.000000000000004%, transparent 25.000000000000004%,transparent 27.94117647058824%, $btn 27.94117647058824%,$btn 30.882352941176475%, transparent 30.882352941176475%,transparent 33.82352941176471%, $btn 33.82352941176471%,$btn 36.76470588235294%, transparent 36.76470588235294%,transparent 39.705882352941174%, $btn 39.705882352941174%,$btn 42.647058823529406%, transparent 42.647058823529406%,transparent 45.58823529411764%, $btn 45.58823529411764%,$btn 48.52941176470587%, transparent 48.52941176470587%,transparent 51.4705882352941%, $btn 51.4705882352941%,$btn 54.411764705882334%, transparent 54.411764705882334%,transparent 57.352941176470566%, $btn 57.352941176470566%,$btn 60.2941176470588%, transparent 60.2941176470588%,transparent 63.23529411764703%, $btn 63.23529411764703%,$btn 66.17647058823526%, transparent 66.17647058823526%,transparent 69.1176470588235%, $btn 69.1176470588235%,$btn 72.05882352941173%, transparent 72.05882352941173%,transparent 74.99999999999996%, $btn 74.99999999999996%,$btn 77.94117647058819%, transparent 77.94117647058819%,transparent 80.88235294117642%, $btn 80.88235294117642%,$btn 83.82352941176465%, transparent 83.82352941176465%,transparent 86.76470588235289%, $btn 86.76470588235289%,$btn 89.70588235294112%, transparent 89.70588235294112%,transparent 92.64705882352935%, $btn 92.64705882352935%,$btn 95.58823529411758%, transparent 95.58823529411758%,transparent 98.52941176470581%, $btn 98.52941176470581%,$btn 101.47058823529404%, transparent 101.47058823529404%,$btn 100%),
+    linear-gradient(180deg,$btn,$btn 6.25%, transparent 6.25%,transparent 18.75%, $btn 18.75%,$btn 31.25%, transparent 31.25%,transparent 43.75%, $btn 43.75%,$btn 56.25%, transparent 56.25%,transparent 68.75%, $btn 68.75%,$btn 81.25%, transparent 81.25%,transparent 93.75%, $btn 93.75%,$btn 100%),
+    linear-gradient(270deg,$btn,$btn 1.4705882352941178%, transparent 1.4705882352941178%,transparent 4.411764705882353%, $btn 4.411764705882353%,$btn 7.352941176470589%, transparent 7.352941176470589%,transparent 10.294117647058824%, $btn 10.294117647058824%,$btn 13.23529411764706%, transparent 13.23529411764706%,transparent 16.176470588235297%, $btn 16.176470588235297%,$btn 19.117647058823533%, transparent 19.117647058823533%,transparent 22.058823529411768%, $btn 22.058823529411768%,$btn 25.000000000000004%, transparent 25.000000000000004%,transparent 27.94117647058824%, $btn 27.94117647058824%,$btn 30.882352941176475%, transparent 30.882352941176475%,transparent 33.82352941176471%, $btn 33.82352941176471%,$btn 36.76470588235294%, transparent 36.76470588235294%,transparent 39.705882352941174%, $btn 39.705882352941174%,$btn 42.647058823529406%, transparent 42.647058823529406%,transparent 45.58823529411764%, $btn 45.58823529411764%,$btn 48.52941176470587%, transparent 48.52941176470587%,transparent 51.4705882352941%, $btn 51.4705882352941%,$btn 54.411764705882334%, transparent 54.411764705882334%,transparent 57.352941176470566%, $btn 57.352941176470566%,$btn 60.2941176470588%, transparent 60.2941176470588%,transparent 63.23529411764703%, $btn 63.23529411764703%,$btn 66.17647058823526%, transparent 66.17647058823526%,transparent 69.1176470588235%, $btn 69.1176470588235%,$btn 72.05882352941173%, transparent 72.05882352941173%,transparent 74.99999999999996%, $btn 74.99999999999996%,$btn 77.94117647058819%, transparent 77.94117647058819%,transparent 80.88235294117642%, $btn 80.88235294117642%,$btn 83.82352941176465%, transparent 83.82352941176465%,transparent 86.76470588235289%, $btn 86.76470588235289%,$btn 89.70588235294112%, transparent 89.70588235294112%,transparent 92.64705882352935%, $btn 92.64705882352935%,$btn 95.58823529411758%, transparent 95.58823529411758%,transparent 98.52941176470581%, $btn 98.52941176470581%,$btn 101.47058823529404%, transparent 101.47058823529404%,$btn 100%);
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+    background-repeat: no-repeat;
+
+    width: 615px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

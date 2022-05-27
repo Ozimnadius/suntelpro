@@ -1,0 +1,60 @@
+.about {
+  padding-top: 130px;
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 85px 55px;
+  }
+
+  &__col{
+    &--bg{
+      padding-left: 40px;
+      background: url("/images/content/about/bg.png") 0 0 no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__content {
+    h2{
+      @extend .title;
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-size: 36px;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 40px;
+    }
+
+    h4 {
+      font-size: 33px;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    p{
+      max-width: 675px;
+      font-size: 22px;
+      margin-bottom: 30px;
+
+      .gold{
+        color: $btn;
+      }
+    }
+
+    a {
+      @extend .btn;
+    }
+  }
+
+  img{
+    display: block;
+  }
+}

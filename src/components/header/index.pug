@@ -9,6 +9,7 @@ header.header
                 a(href=i.href).header__item= i.name
     .header__left
         .header__btns
-            a(href=phone.href).header__btn= phone.val
-            button(type='button').header__btn Связаться
+            .header__btn
+                a(href=phone.href).header__phone= phone.val
+            a(href="#").header__btn.header__call.hover-btn Связаться
 

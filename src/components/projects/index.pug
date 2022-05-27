@@ -1,0 +1,33 @@
+.projects
+    .projects__title.title Наши проекты
+    .projects__list
+        -
+            var list = [
+                {
+                    img: '/images/content/projects/1.jpg',
+                    title: 'Это можно сделать в офисе лизинговой ',
+                    desc: 'Заполните все поля предлагаемой формы заявки и ждите, когда с вами свяжется специалист по продажам.'
+                },
+                {
+                    img: '/images/content/projects/2.jpg',
+                    title: 'Это можно сделать в офисе лизинговой ',
+                    desc: 'Заполните все поля предлагаемой формы заявки и ждите, когда с вами свяжется специалист по продажам.'
+                },
+                {
+                    img: '/images/content/projects/3.jpg',
+                    title: 'Это можно сделать в офисе лизинговой ',
+                    desc: 'Заполните все поля предлагаемой формы заявки и ждите, когда с вами свяжется специалист по продажам.'
+                },
+                {
+                    img: '/images/content/projects/4.jpg',
+                    title: 'Это можно сделать в офисе лизинговой ',
+                    desc: 'Заполните все поля предлагаемой формы заявки и ждите, когда с вами свяжется специалист по продажам.'
+                }
+            ];
+        each i in list
+            .projects__item.project
+                .project__img
+                    img(src=i.img alt="lorem")
+                .project__bottom
+                    .project__title= i.title
+                    .project__desc= i.desc

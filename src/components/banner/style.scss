@@ -1,6 +1,7 @@
 .banner{
   height: 100vh;
   position: relative;
+  border-bottom: 1px solid #5b5e61;
 
   &__img{
     height: 100%;
@@ -39,6 +40,7 @@
   }
 
   &__txt{
+    max-width: 576px;
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 35px;

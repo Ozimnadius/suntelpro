@@ -1,0 +1,24 @@
+.result{
+  padding-top: 140px;
+  padding-bottom: 80px;
+  margin-left: 75px;
+
+  &__title{
+    margin-bottom: 50px;
+    font-size: 60px;
+  }
+
+  &__txt{
+    max-width: 1200px;
+    font-size: 40px;
+  }
+
+  &__img{
+    margin-top: -50px;
+    img{
+      display: block;
+    }
+  }
+
+
+}

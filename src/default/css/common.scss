@@ -1,5 +1,5 @@
 .btn{
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 30px;
   padding: 20px 0;
@@ -55,6 +55,44 @@
   }
 }
 
+.hover{
+  &-btn{
+    @include tr;
+
+    &:hover{
+      background-color: $btn;
+      color: #1A1A1A;
+      svg{
+        path{
+          fill: currentColor;
+        }
+      }
+    }
+  }
+}
+
+.title{
+  font-size: 48px;
+  font-weight: 400;
+  line-height: lh(48,65);
+}
+
+.bg{
+  &--dark{
+    background-color: #1d1f22;
+  }
+}
+
+.bdt{
+  border-top: 1px solid $border;
+}
+
 .ovh{
   overflow: hidden;
+}
+
+.color{
+  &-gold{
+    color: $btn;
+  }
 }

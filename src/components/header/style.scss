@@ -1,6 +1,6 @@
 .header{
   border-bottom: 1px solid $border;
-  padding-left: 210px;
+  padding-left: 90px;
   display:grid;
   grid-template-columns: 223px 1fr auto;
   --height: 114px;
@@ -8,7 +8,7 @@
   position: absolute;
   z-index: 10;
   top: 0;
-  left: 0;
+  left: 120px;
   right: 0;
   @include xlg-block{
     height: 76px;
@@ -72,23 +72,22 @@
   }
 
   &__btn{
-    font-family: Muller;
-    color: $white;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
     height: var(--height);
     padding: 0 75px;
-
     display: flex;
     align-items: center;
     justify-content: center;
     border-left: 1px solid $border;
-
-    @include tr;
-
-    &:hover{
-      color: $btn;
-    }
   }
+
+  &__phone{
+    @extend .header__item;
+    font-size: 20px;
+  }
+
+  &__call{
+    color: $white;
+    font-size: 20px;
+  }
+
 }

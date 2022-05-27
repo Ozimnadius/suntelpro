@@ -1,0 +1,62 @@
+.buy {
+  padding-top: 80px;
+  padding-bottom: 150px;
+
+  &__title {
+    margin-bottom: 65px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 563fr 940fr;
+    gap: 110px;
+  }
+
+  &__img {
+    img {
+      display: block;
+    }
+  }
+
+  &__right {
+    padding-top: 15px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 20px;
+    margin-bottom: 85px;
+  }
+
+  &__info{
+    max-width: 759px;
+    color: $white;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 50px;
+  }
+
+  &__desc{
+    font-size: 24px;
+  }
+}
+
+.buy-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 30px;
+
+  &__name{
+    color: $btn;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  &__desc{
+    color: $white;
+    font-size: 18px;
+  }
+}

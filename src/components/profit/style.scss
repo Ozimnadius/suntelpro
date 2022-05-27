@@ -1,0 +1,32 @@
+.profit {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  &__img{
+    img{
+      display: block;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 75px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 30px;
+    font-size: 24px;
+  }
+}
