@@ -1,0 +1,101 @@
+.mmenu{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  right: 0;
+  backdrop-filter: blur(30px);
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+
+  &.active{
+    display: flex;
+  }
+
+  &__close{
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: $txt;
+    @include tr;
+
+    &:hover{
+      color: $btn;
+    }
+
+    svg{
+      path{
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__wrap{
+    width: 778px;
+    margin: auto;
+  }
+
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__title{
+    color: $white;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+  &__list{
+    margin-bottom: 85px;
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: $white;
+    font-size: 18px;
+
+    border-top: 1px solid #474747;
+    padding: 20px 0;
+    @include tr;
+
+    &:hover{
+      color: $btn;
+    }
+
+    &:last-child{
+      border-bottom: 1px solid #474747;
+    }
+
+    svg{
+      path{
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__tel{
+    a{
+      color: $white;
+      font-size: 20px;
+     @include tr;
+
+      &:hover{
+        color: $btn;
+      }
+    }
+  }
+
+}

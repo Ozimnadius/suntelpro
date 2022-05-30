@@ -24,6 +24,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @include xlg-block{
+      left: 40px;
+      right: 40px;
+    }
   }
 
   &__title{
@@ -33,6 +37,9 @@
     line-height: lh(60,68);
 
     margin-bottom: 40px;
+    @include xlg-block{
+      font-size: 40px;
+    }
 
     &--btn {
       color: $btn;
@@ -44,6 +51,10 @@
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 35px;
+    @include xlg-block{
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
   }
 
   &__advs{

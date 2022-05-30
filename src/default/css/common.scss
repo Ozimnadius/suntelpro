@@ -13,8 +13,17 @@
   text-align: left;
   overflow: hidden;
   @include tr;
+  @include xlg-block{
+    font-size: 14px;
+    gap: 20px;
+    padding: 15px 0;
+  }
   
   svg{
+    @include xlg-block{
+      width: 24px;
+      height: 11px;
+    }
     path{
       fill: currentColor;
     }
@@ -69,12 +78,28 @@
       }
     }
   }
+
+  &-black{
+    background-color: $btn;
+    border: 1px solid $btn;
+    color: $bg;
+
+    @include tr;
+    
+    &:hover{
+      background: $bg;
+      color: #828282;
+    }
+  }
 }
 
 .title{
   font-size: 48px;
   font-weight: 400;
   line-height: lh(48,65);
+  @include xlg-block{
+    font-size: 34px;
+  }
 }
 
 .bg{

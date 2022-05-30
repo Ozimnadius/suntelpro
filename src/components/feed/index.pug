@@ -1,0 +1,22 @@
+.feed
+    .feed__left
+        form.feed__form
+            h2.feed__title.title Остались вопросы?
+            .feed__txt Оставьте свои данные и наши специалисты проконсультируют Вас в ближайшее время.
+            .feed__fields
+                .feed__field
+                    input(type="text" name="name" placeholder="Ваше имя").feed__input
+                .feed__field
+                    input( type="tel" name="tel" placeholder="+7 (___) ___-__-__" required).feed__input
+                .feed__field
+                    input(type="email" name="email" placeholder="Эл. почта").feed__input
+            .feed__accept
+                - var txt = "Даю согласие на обработку персональных данных";
+                include ../accept/index
+            button(type='submit').feed__submit.hover-black Отправить
+
+
+    .feed__right
+        .feed__sub Вы всегда можете связаться с нами<br> по вопросам сотрудничества
+        .feed__img
+            img(src="/images/content/feed/img.jpg" alt="lorem")

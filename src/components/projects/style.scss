@@ -1,15 +1,24 @@
 .projects{
   padding-top: 100px;
   padding-bottom: 120px;
+  @include xlg-block{
+    padding: 60px 0;
+  }
 
   &__title{
     margin-bottom: 55px;
+    @include xlg-block{
+      margin-bottom: 30px;
+    }
   }
 
   &__list{
     display:grid;
     grid-template-columns: repeat(4,1fr);
     gap: 25px;
+    @include xlg-block{
+        gap: 20px;
+    }
   }
 }
 
@@ -17,6 +26,9 @@
 
   &__img{
     margin-bottom: 35px;
+    @include xlg-block{
+      margin-bottom: 25px;
+    }
     img{
       display: block;
     }
@@ -26,9 +38,16 @@
     color: $btn;
     font-size: 30px;
     margin-bottom: 30px;
+    @include xlg-block{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &__desc{
     font-size: 17px;
+    @include xlg-block{
+      font-size: 13px;
+    }
   }
 }

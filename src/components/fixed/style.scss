@@ -9,6 +9,10 @@
   width: 120px;
   background: linear-gradient(179.14deg, #BD8D4F 0%, #EAD092 24.76%, #B48148 49.67%, #EAD193 76.85%, #B48148 100%);
   border-right: var(--bdw) solid #c79a60;
+  @include xlg-block{
+    width: 80px;
+    --bdw: 7px;
+  }
 
 
   &__wrap{
@@ -16,6 +20,9 @@
     flex-direction: column;
     margin-right: -9px;
     height: 100%;
+    @include xlg-block{
+      margin-right: -7px;
+    }
   }
 
   &__menu {
@@ -25,6 +32,16 @@
     height: 115px;
     border-bottom: 1px solid #ba8d53;
     padding-right: var(--bdw);
+    @include xlg-block{
+      height: 75px;
+    }
+
+    svg{
+      @include xlg-block{
+        width: 28px;
+        height: 18px;
+      }
+    }
   }
 
   &__center{
@@ -51,6 +68,18 @@
 
     color: #000000;
     font-size: 20px;
+    @include xlg-block{
+      font-size: 14px;
+    }
+  }
+
+  &__logo{
+    @include xlg-block{
+      width: 12px;
+    }
+    img{
+      display: block;
+    }
   }
 
   &__socials{
@@ -65,5 +94,8 @@
     justify-content: center;
     border-top: 1px solid #ba8d53;
     height: 115px;
+    @include xlg-block{
+      height: 75px;
+    }
   }
 }

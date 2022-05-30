@@ -1,0 +1,74 @@
+.call{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+
+  &.active{
+    display: flex;
+  }
+
+  &__form{
+    width: 375px;
+    margin: auto;
+    background: linear-gradient(194.46deg, #35383C 0.44%, #191B1F 89.75%);
+    padding: 15px;
+  }
+
+  &__wrap{
+    border: 1px solid $btn;
+    background-color: $bg;
+    position: relative;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $white;
+    @include tr;
+
+    &:hover{
+      color: $btn;
+    }
+
+    svg{
+      path{
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__title{
+    color: $white;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__txt{
+    color: $white;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__fields{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__accept{
+    margin-bottom: 30px;
+  }
+}

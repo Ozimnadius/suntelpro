@@ -1,0 +1,54 @@
+footer.footer.bdt
+    .footer__top
+        .container
+            .footer-top
+                .footer-top__left
+                    .footer__logo
+                        a(href="/")
+                            img(src="/images/content/logo2.png" alt="lorem")
+                    .footer__desc Компания «SUNTEL» специализируется на предоставлении медицинским учреждениям оборудования в лизинг.
+                .footer-top__center
+                    .footer__menu
+                        .footer-menu
+                            .footer-menu__title меню
+                            .footer-menu__list
+                                each i in menu
+                                    a(href=i.href).footer-menu__link= i.name
+                .footer-top__right
+                    .footer__addr
+                        .footer-addr
+                            .footer-addr__name Адрес
+                            .footer-addr__val.
+                                115093 Россия, Москва, <br>
+                                ул. Щипок, д.2 офис 312
+                    .footer__email
+                        a(href="mailto:info@suntelpro.ru") info@suntelpro.ru
+
+    .footer__middle.bdt
+        .container
+            .footer-middle.subs
+                .footer-middle__left
+                    .footer__tel
+                        a(href=phone.href)= phone.val
+                        span Офис
+                .footer-middle__center
+                    .subs__arrow
+                        span Подпишитесь на рассылку
+                        <svg width="66" height="9" viewBox="0 0 66 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M65.3726 4.84575C65.5679 4.65048 65.5679 4.3339 65.3726 4.13864L62.1907 0.956659C61.9954 0.761397 61.6788 0.761397 61.4836 0.956659C61.2883 1.15192 61.2883 1.4685 61.4836 1.66377L64.312 4.49219L61.4836 7.32062C61.2883 7.51588 61.2883 7.83246 61.4836 8.02773C61.6788 8.22299 61.9954 8.22299 62.1907 8.02773L65.3726 4.84575ZM0.566528 4.99219L65.0191 4.99219L65.0191 3.99219L0.566528 3.99219L0.566528 4.99219Z" fill="#FAFAFA"/>
+                        </svg>
+                    .subs__info Получайте свежие новости о лизинге медицинских оборудований
+                .footer-middle__right
+                    form.subs__form
+                        input(type="email" name="email" placeholder="Введите свою почту" required).subs__input
+                        button(type='submit').subs__submit.hover-black Подписаться
+    .footer__bottom.bdt
+        .container
+            .footer-bottom
+                .footer-bottom__left
+                    .footer__copy © SUNTEL. Все права защищены.
+                .footer-bottom__center
+                    .footer__policy
+                        a(href="/") Политика конфиденциальности
+                .footer-bottom__right
+                    include ../socials/index

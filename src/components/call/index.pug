@@ -1,0 +1,20 @@
+.call
+    form.call__form
+        .call__wrap
+            button(type='button').call__close
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9166 2.08083L17.9191 0.0833321L9.99992 8.0025L2.08075 0.0833321L0.083252 2.08083L8.00242 10L0.083252 17.9192L2.08075 19.9167L9.99992 11.9975L17.9191 19.9167L19.9166 17.9192L11.9974 10L19.9166 2.08083Z" fill="white"/>
+                </svg>
+            .call__title Обратная связь
+            .call__txt Оставьте свои контактные данные и наши специалисты свяжутся с Вами в ближайшее время
+            .feed__fields.call__fields
+                .feed__field
+                    input(type="text" name="name" placeholder="Ваше имя").feed__input
+                .feed__field
+                    input( type="tel" name="tel" placeholder="+7 (___) ___-__-__" required).feed__input
+                .feed__field
+                    input(type="email" name="email" placeholder="Эл. почта").feed__input
+            .feed__accept.call__accept
+                - var txt = "Даю согласие на обработку персональных данных";
+                include ../accept/index
+            button(type='submit').feed__submit.hover-black Отправить

@@ -1,0 +1,180 @@
+.footer {
+
+  &__top {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    @include xlg-block {
+      padding: 40px 0;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+    @include xlg-block {
+      margin-bottom: 20px;
+      width: 191px;
+      height: 47px;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 315px;
+    @include xlg-block {
+      font-size: 11px;
+      max-width: 210px;
+    }
+  }
+
+  &__addr {
+    margin-bottom: 55px;
+    @include xlg-block {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__email {
+    a {
+      color: #5b5e61;
+      font-size: 24px;
+      @include tr;
+      @include xlg-block {
+        font-size: 16px;
+      }
+
+      &:hover {
+        color: $btn;
+      }
+    }
+  }
+
+  &__middle {
+    padding: 40px 0;
+    @include xlg-block {
+      padding: 25px 0;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+
+    color: #5b5e61;
+    font-size: 20px;
+    @include xlg-block {
+      font-size: 13px;
+      gap: 13px;
+    }
+
+    a {
+      color: $btn;
+      font-size: 24px;
+      @include xlg-block {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 40px 0;
+  }
+
+  &__copy {
+    color: #c0c0c0;
+    font-size: 16px;
+    @include xlg-block{
+      font-size: 11px;
+    }
+  }
+
+  &__policy {
+    color: #c0c0c0;
+    font-size: 16px;
+    text-decoration: underline;
+    @include tr;
+    @include xlg-block{
+      font-size: 11px;
+    }
+
+    &:hover {
+      color: $btn;
+    }
+  }
+
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+}
+
+.footer-menu {
+  &__title {
+    color: $btn;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    @include xlg-block {
+      font-size: 9px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__link {
+    color: #5b5e61;
+    font-size: 18px;
+    padding: 4px 0;
+    @include tr;
+    @include xlg-block {
+      padding: 3px 0;
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: $btn;
+    }
+  }
+}
+
+.footer-addr {
+  &__name {
+    @extend .footer-menu__title;
+    margin-bottom: 30px;
+    @include xlg-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__val {
+    font-size: 20px;
+    font-weight: 300;
+    @include xlg-block {
+      font-size: 13px;
+    }
+  }
+}
+
+.footer-middle {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+}

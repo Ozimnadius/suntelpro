@@ -17,6 +17,9 @@
     display: flex;
     gap: 15px;
     cursor: pointer;
+    @include xlg-block{
+        gap: 10px;
+    }
   }
 
   &__check{
@@ -27,6 +30,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    @include xlg-block{
+      width: 13px;
+      height: 13px;
+    }
 
     svg{
       display: none;
@@ -36,5 +44,8 @@
   &__txt{
     color: rgba($white,.8);
     font-size: 14px;
+    @include xlg-block{
+      font-size: 10px;
+    }
   }
 }

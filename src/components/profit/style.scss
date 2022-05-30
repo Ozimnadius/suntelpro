@@ -1,19 +1,29 @@
 .profit {
   padding-top: 100px;
   padding-bottom: 50px;
+  @include xlg-block {
+    padding-top: 65px;
+    padding-bottom: 35px;
+  }
 
   &__title {
     margin-bottom: 60px;
+    @include xlg-block {
+      margin-bottom: 40px;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
+    @include xlg-block {
+      gap: 50px;
+    }
   }
 
-  &__img{
-    img{
+  &__img {
+    img {
       display: block;
     }
   }
@@ -21,6 +31,10 @@
   &__list {
     display: grid;
     gap: 75px;
+    @include xlg-block {
+      gap: 50px;
+      max-width: 387px;
+    }
   }
 
   &__item {
@@ -28,5 +42,16 @@
     grid-template-columns: 30px 1fr;
     gap: 30px;
     font-size: 24px;
+    @include xlg-block {
+      font-size: 16px;
+      gap: 20px;
+    }
+
+    svg {
+      @include xlg-block {
+        width: 20px;
+        height: 18px;
+      }
+    }
   }
 }

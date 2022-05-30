@@ -13,6 +13,7 @@ html {
   font-weight: 400;
   line-height: 1.42;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -35,6 +36,9 @@ body {
   flex-direction: column;
   margin-left: 120px;
   border-left: 1px solid #3d3f42;
+  @include xlg-block{
+    margin-left: 80px;
+  }
 }
 
 .container {

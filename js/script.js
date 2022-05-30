@@ -1,6 +1,7 @@
 //USER
 
 
+
 // common.js
 const jsTools = {
     getNumber: function (str) {
@@ -42,4 +43,89 @@ window.addEventListener("load", function () {
     $('input[type="tel"]').inputmask("+7 (999) 999-99-99");
 });
 
+class Mmenu{
+    constructor(selector) {
+        this.mmenu = document.querySelector(selector);
+        this.links= this.mmenu.querySelectorAll('.mmenu__item');
+
+        this.init();
+    }
+
+    init(){
+        this.links.forEach(i=>{
+           i.addEventListener('click', (e)=>{
+               e.preventDefault();
+              let link = e.currentTarget;
+              document.querySelector(link.hash).scrollIntoView();
+              this.close(e);
+           });
+        });
+
+        this.mmenu.addEventListener('click', (e)=>{
+            if (!e.target.closest('.mmenu__wrap') || e.target.closest('.mmenu__close')){
+                this.close(e);
+            }
+        });
+    }
+
+    open=(e)=>{
+        e.preventDefault();
+        this.mmenu.classList.add('active');
+        document.body.classList.add('ovh');
+    }
+
+    close=(e)=>{
+        e.preventDefault();
+        this.mmenu.classList.remove('active');
+        document.body.classList.remove('ovh');
+    }
+}
+class Call{
+    constructor(selector) {
+        this.call = document.querySelector(selector);
+
+        this.init();
+    }
+
+    init(){
+        this.call.addEventListener('click',(e)=>{
+            if (!e.target.closest('.call__form') || e.target.closest('.call__close')){
+                this.close(e);
+            }
+        });
+    }
+
+    open=(e)=>{
+        e.preventDefault();
+        this.call.classList.add('active');
+        document.body.classList.add('ovh');
+    }
+
+    close=(e)=>{
+        e.preventDefault();
+        this.call.classList.remove('active');
+        document.body.classList.remove('ovh');
+    }
+}
+window.addEventListener('load', function () {
+    new Events();
+});
+
+class Events {
+    constructor() {
+        this.openMmenuItems = document.querySelectorAll('[data-event="openMmenu"]');
+        this.mmenu = new Mmenu('.mmenu');
+
+        this.openCallItems = document.querySelectorAll('[data-event="openCall"]');
+        this.call = new Call('.call');
+        this.init();
+    }
+
+    init() {
+        this.openMmenuItems.forEach(i => i.addEventListener('click', this.mmenu.open));
+        this.openCallItems.forEach(i => i.addEventListener('click', this.call.open));
+
+    }
+
+}
 //# sourceMappingURL=script.js.map

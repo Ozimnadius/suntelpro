@@ -11,7 +11,10 @@
   left: 120px;
   right: 0;
   @include xlg-block{
-    height: 76px;
+    --height: 75px;
+    left: 80px;
+    grid-template-columns: 130px 1fr auto;
+    padding-left: 40px;
   }
 
   &__left{
@@ -27,6 +30,9 @@
   &__center{
     padding: 0 75px;
     align-self: center;
+    @include xlg-block{
+      padding: 0 40px;
+    }
   }
 
   &__menu{
@@ -44,7 +50,11 @@
     font-size: 18px;
     padding: 5px 0;
     overflow: hidden;
+    white-space: nowrap;
     @include tr;
+    @include xlg-block{
+      font-size: 14px;
+    }
 
     &:before{
       content: '';
@@ -78,16 +88,25 @@
     align-items: center;
     justify-content: center;
     border-left: 1px solid $border;
+    @include xlg-block{
+      padding: 0 30px;
+    }
   }
 
   &__phone{
     @extend .header__item;
     font-size: 20px;
+    @include xlg-block{
+      font-size: 14px;
+    }
   }
 
   &__call{
     color: $white;
     font-size: 20px;
+    @include xlg-block{
+      font-size: 14px;
+    }
   }
 
 }

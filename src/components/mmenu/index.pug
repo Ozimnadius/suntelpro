@@ -1,0 +1,23 @@
+.mmenu
+    button(type='button').mmenu__close
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26.9167 9.08081L24.9192 7.08331L17 15.0025L9.08087 7.08331L7.08337 9.08081L15.0025 17L7.08337 24.9191L9.08087 26.9166L17 18.9975L24.9192 26.9166L26.9167 24.9191L18.9975 17L26.9167 9.08081Z" fill="white"/>
+        </svg>
+    .mmenu__wrap
+        .mmenu__top
+            .mmenu__logo
+                a(href="/")
+                    img(src="/images/content/logo2.png" alt="lorem")
+            .mmenu__title Меню
+        .mmenu__list
+            each i in menu
+                a(href=i.href).mmenu__item
+                    span= i.name
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.576904 17.2574L14.8327 3.00163H5.96152V0.309326H19.4231V13.7709H16.7308V4.89971L2.47498 19.1555L0.576904 17.2574Z" fill="white"/>
+                    </svg>
+        .mmenu__bottom
+            .mmenu__socials
+                include ../socials/index
+            .mmenu__tel
+                a(href=phone.href)= phone.val

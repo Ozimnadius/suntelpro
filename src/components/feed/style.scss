@@ -1,0 +1,96 @@
+.feed {
+  padding-top: 120px;
+  padding-bottom: 160px;
+
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 220px;
+  @include xlg-block {
+    padding: 60px 0;
+    grid-template-columns: 330px 1fr;
+    gap: 155px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__txt {
+    color: #5b5e61;
+    font-size: 16px;
+    margin-bottom: 25px;
+    @include xlg-block {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__fields {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 35px;
+    @include xlg-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 7px 0;
+    border-bottom: 1px solid #5b5e61;
+    color: $txt;
+    font-size: 20px;
+    @include xlg-block {
+      font-size: 15px;
+      padding: 4px 0;
+    }
+
+    &::placeholder {
+      color: #5b5e61;
+    }
+  }
+
+  &__accept {
+    margin-bottom: 40px;
+    @include xlg-block{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__submit {
+    width: 173px;
+    height: 41px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    @include xlg-block{
+      width: 126px;
+      height: 30px;
+      font-size: 10px;
+    }
+  }
+
+  &__sub {
+    color: $white;
+    font-size: 32px;
+    margin-bottom: 50px;
+    @include xlg-block{
+      font-size: 23px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    border-left: 24px solid $btn;
+
+    img {
+      display: block;
+    }
+  }
+}

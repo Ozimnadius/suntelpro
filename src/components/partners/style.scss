@@ -1,9 +1,15 @@
 .partners{
   padding-top: 90px;
   padding-bottom: 130px;
+  @include xlg-block{
+    padding: 60px 0;
+  }
 
   &__title{
     margin-bottom: 65px;
+    @include xlg-block{
+      margin-bottom: 45px;
+    }
   }
 
   &__list{

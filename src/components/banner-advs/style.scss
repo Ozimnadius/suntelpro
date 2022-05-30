@@ -6,6 +6,10 @@
   padding-left: 90px;
   height: 115px;
   border-top: 1px solid $border;
+  @include xlg-block{
+    height: 75px;
+    padding-left: 40px;
+  }
 
   &__item{
     display: flex;
@@ -14,5 +18,16 @@
 
     color: $white;
     font-size: 16px;
+    @include xlg-block{
+      font-size: 14px;
+      gap: 15px;
+    }
+
+    svg{
+      @include xlg-block{
+        width: 20px;
+        height: 18px;
+      }
+    }
   }
 }
