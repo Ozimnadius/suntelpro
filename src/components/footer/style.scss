@@ -32,6 +32,9 @@
     @include xlg-block {
       margin-bottom: 40px;
     }
+    @include lg-block {
+      margin-bottom: 15px;
+    }
   }
 
   &__email {
@@ -67,6 +70,13 @@
       font-size: 13px;
       gap: 13px;
     }
+    @include lg-block {
+      gap: 25px;
+      font-size: 27px;
+    }
+    @include sm-block {
+      gap: 15px;
+    }
 
     a {
       color: $btn;
@@ -74,17 +84,29 @@
       @include xlg-block {
         font-size: 16px;
       }
+      @include lg-block {
+        font-size: 32px;
+      }
+      @include sm-block {
+        font-size: 30px;
+      }
     }
   }
 
   &__bottom {
     padding: 40px 0;
+    @include lg-block {
+      padding: 15px 0;
+    }
+    @include sm-block {
+      padding: 25px 0;
+    }
   }
 
   &__copy {
     color: #c0c0c0;
     font-size: 16px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 11px;
     }
   }
@@ -94,7 +116,7 @@
     font-size: 16px;
     text-decoration: underline;
     @include tr;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 11px;
     }
 
@@ -110,6 +132,13 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 
+  @include lg-block {
+    grid-template-columns: 210px 1fr;
+    gap: 30px 50px;
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+  }
 }
 
 .footer-menu {
@@ -121,6 +150,9 @@
     @include xlg-block {
       font-size: 9px;
       margin-bottom: 20px;
+    }
+    @include lg-block {
+      margin-bottom: 13px;
     }
   }
 
@@ -170,6 +202,23 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: center;
+  @include lg-block {
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
+
+  &__left {
+    @include lg-block {
+      grid-column: span 2;
+    }
+    @include sm-block {
+      grid-column: initial;
+    }
+  }
 }
 
 .footer-bottom {
@@ -177,4 +226,15 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: center;
+  @include sm-block {
+    grid-template-columns: 100%;
+    justify-items: center;
+    gap: 15px;
+  }
+
+  &__center {
+    @include sm-block {
+      order: 1;
+    }
+  }
 }

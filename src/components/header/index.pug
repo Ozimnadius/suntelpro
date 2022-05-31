@@ -1,5 +1,11 @@
 header.header
     .header__left
+        button(type='button' data-event="openMmenu").header__mmenu-btn
+            <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="2.43902" fill="white"/>
+            <rect y="4.87949" width="12.6829" height="2.43902" fill="white"/>
+            <rect y="9.75897" width="6.82927" height="2.43902" fill="white"/>
+            </svg>
         .header__logo
             a(href="/")
                 img(src="/images/content/logo.svg" alt="lorem")
@@ -7,7 +13,7 @@ header.header
         .header__menu
             each i in menu
                 a(href=i.href).header__item= i.name
-    .header__left
+    .header__right
         .header__btns
             .header__btn
                 a(href=phone.href).header__phone= phone.val

@@ -39,6 +39,12 @@ body {
   @include xlg-block{
     margin-left: 80px;
   }
+  @include lg-block{
+    margin-left: 48px;
+  }
+  @include sm-block{
+    margin-left: 0;
+  }
 }
 
 .container {

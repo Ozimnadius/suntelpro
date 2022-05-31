@@ -5,14 +5,21 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @include lg-block{
-    display: none;
+  @include lg-block {
+    padding-top: 60px;
+    padding-bottom: 35px;
+  }
+  @include sm-block {
+    padding: 40px 0;
   }
 
   &__title {
     margin-bottom: 90px;
     @include xlg-block {
       margin-bottom: 50px;
+    }
+    @include sm-block {
+      margin-bottom: 40px;
     }
   }
 
@@ -22,14 +29,45 @@
     gap: 110px 30px;
 
     counter-reset: li;
-    @include xlg-block{
-        gap: 80px 30px;
+    @include xlg-block {
+      gap: 80px 30px;
+    }
+    @include lg-block {
+      display: flex;
+      flex-wrap: wrap;
+      grid-template-columns: initial;
+      gap: 40px 30px;
+    }
+    @include sm-block {
+      gap: 30px;
     }
   }
 
   &__item {
+    @include lg-block {
+      width: 250px;
+    }
+    @include sm-block {
+      width: 100%;
+    }
+
     &--2 {
       grid-column: span 2;
+      @include lg-block {
+        grid-column: initial;
+        width: 100%;
+      }
+
+    }
+
+    &:nth-child(6) {
+      .step {
+        &:after {
+          @include sm-block {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
@@ -38,20 +76,60 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  @include sm-block {
+    padding-left: 40px;
+    position: relative;
+  }
+
+  &:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $btn;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: none;
+    @include sm-block {
+      display: block;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 1px;
+    background-color: #5b5e61;
+    position: absolute;
+    left: 4px;
+    top: 33px;
+    height: calc(100% + 30px);
+    @include sm-block {
+      display: block;
+    }
+  }
 
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    @include sm-block {
+      gap: 20px;
+      margin-bottom: 0;
+      justify-content: initial;
+    }
 
     svg {
       width: 190px;
       height: 8px;
-      @include xlg-block{
+      @include xlg-block {
         width: 131px;
         height: 6px;
 
+      }
+      @include sm-block {
+        display: none;
       }
     }
 
@@ -61,7 +139,7 @@
       color: $btn;
       font-size: 96px;
       line-height: 1;
-      @include xlg-block{
+      @include xlg-block {
         font-size: 66px;
       }
     }
@@ -79,9 +157,25 @@
     font-size: 24px;
     height: 90px;
     line-height: 1.125;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 16px;
       height: 65px;
+    }
+    @include lg-block {
+      height: 60px;
+    }
+    @include sm-block {
+      display: none;
+    }
+  }
+
+  &__name-top {
+    display: none;
+    color: $btn;
+    font-size: 16px;
+
+    @include sm-block {
+      display: block;
     }
   }
 
@@ -90,8 +184,11 @@
     color: $white;
     font-size: 18px;
     margin-bottom: auto;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 12px;
+    }
+    @include sm-block{
+      max-width: 235px;
     }
   }
 
@@ -113,13 +210,16 @@
     text-align: center;
     line-height: 1;
 
-    @include xlg-block{
+    @include xlg-block {
       width: 225px;
       height: 42px;
       font-size: 12px;
     }
+    @include sm-block{
+      margin-top: 15px;
+    }
 
-    svg{
+    svg {
       display: block;
     }
   }
@@ -132,14 +232,14 @@
 
     color: $btn;
     font-size: 18px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 12px;
       gap: 15px;
       height: 42px;
     }
 
-    svg{
-      @include xlg-block{
+    svg {
+      @include xlg-block {
         width: 30px;
         height: 35px;
       }

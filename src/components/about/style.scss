@@ -5,11 +5,20 @@
     padding-top: 80px;
     padding-bottom: 50px;
   }
+  @include lg-block {
+    padding: 35px 0;
+  }
+  @include sm-block {
+    padding: 20px 0;
+  }
 
   &__title {
     margin-bottom: 40px;
     @include xlg-block {
       margin-bottom: 30px;
+    }
+    @include lg-block {
+      margin-bottom: 15px;
     }
   }
 
@@ -20,13 +29,33 @@
     @include xlg-block {
       gap: 60px 40px;
     }
+    @include lg-block {
+      gap: 40px 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 30px;
+    }
   }
 
   &__col {
+
+    &:nth-child(3){
+      @include sm-block{
+        order: 1;
+      }
+    }
+
     &--bg {
       padding-left: 40px;
       background: url("/images/content/about/bg.png") 0 0 no-repeat;
       background-size: cover;
+      @include lg-block{
+        padding-left: 15px;
+      }
+      @include sm-block{
+        padding-left: 0;
+      }
     }
   }
 
@@ -34,8 +63,11 @@
     h2 {
       @extend .title;
       margin-bottom: 40px;
-      @include xlg-block{
+      @include xlg-block {
         margin-bottom: 30px;
+      }
+      @include lg-block {
+        margin-bottom: 20px;
       }
     }
 
@@ -44,9 +76,13 @@
       font-weight: 400;
       font-style: italic;
       margin-bottom: 40px;
-      @include xlg-block{
+      @include xlg-block {
         font-size: 24px;
         margin-bottom: 25px;
+      }
+      @include lg-block {
+        font-size: 14px;
+        margin-bottom: 10px;
       }
     }
 
@@ -54,9 +90,13 @@
       font-size: 33px;
       font-weight: 400;
       margin-bottom: 40px;
-      @include xlg-block{
+      @include xlg-block {
         font-size: 22px;
         margin-bottom: 35px;
+      }
+      @include lg-block {
+        font-size: 14px;
+        margin-bottom: 20px;
       }
     }
 
@@ -64,9 +104,12 @@
       max-width: 675px;
       font-size: 22px;
       margin-bottom: 30px;
-      @include xlg-block{
+      @include xlg-block {
         font-size: 16px;
         margin-bottom: 20px;
+      }
+      @include lg-block {
+        font-size: 14px;
       }
 
       .gold {

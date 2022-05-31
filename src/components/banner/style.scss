@@ -1,19 +1,33 @@
-.banner{
+.banner {
   height: 100vh;
   position: relative;
   border-bottom: 1px solid #5b5e61;
+  @include lg-block {
+    height: 430px;
+  }
+  @include sm-block {
+    height: auto;
+  }
 
-  &__img{
+  &__img {
     height: 100%;
-    img{
+    @include sm-block{
+      height: auto;
+    }
+
+    img {
       display: block;
       height: 100%;
       width: 100%;
       object-fit: cover;
+      @include sm-block {
+        object-fit: initial;
+        height: auto;
+      }
     }
   }
 
-  &__wrap{
+  &__wrap {
     position: absolute;
     left: 90px;
     right: 90px;
@@ -24,21 +38,38 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    @include xlg-block{
+    @include xlg-block {
       left: 40px;
       right: 40px;
     }
+    @include lg-block {
+      left: 20px;
+      right: 20px;
+      justify-content: flex-start;
+      padding-top: 100px;
+    }
+    @include sm-block{
+      position: static;
+      padding: 20px 10px;
+    }
   }
 
-  &__title{
+  &__title {
     color: $white;
     font-size: 60px;
     font-weight: 400;
-    line-height: lh(60,68);
+    line-height: lh(60, 68);
 
     margin-bottom: 40px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 40px;
+    }
+    @include lg-block {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    @include sm-block{
+      font-size: 20px;
     }
 
     &--btn {
@@ -46,21 +77,32 @@
     }
   }
 
-  &__txt{
+  &__txt {
     max-width: 576px;
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 35px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 14px;
       margin-bottom: 25px;
     }
+    @include lg-block {
+      max-width: 350px;
+      margin-bottom: 15px;
+    }
+    @include sm-block{
+      font-size: 12px;
+      max-width: 240px;
+    }
   }
 
-  &__advs{
+  &__advs {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    @include sm-block{
+      display: none;
+    }
   }
 }

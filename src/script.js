@@ -5,3 +5,4 @@
 // @prepros-append components/mmenu/script.js
 // @prepros-append components/call/script.js
 // @prepros-append components/events/script.js
+// @prepros-append components/up/script.js

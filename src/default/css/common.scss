@@ -18,11 +18,19 @@
     gap: 20px;
     padding: 15px 0;
   }
+  @include lg-block{
+    padding: 7px 0;
+    font-size: 12px;
+  }
   
   svg{
     @include xlg-block{
       width: 24px;
       height: 11px;
+    }
+    @include lg-block{
+      width: 23px;
+      height: 9px;
     }
     path{
       fill: currentColor;
@@ -99,6 +107,9 @@
   line-height: lh(48,65);
   @include xlg-block{
     font-size: 34px;
+  }
+  @include lg-block{
+    font-size: 24px;
   }
 }
 

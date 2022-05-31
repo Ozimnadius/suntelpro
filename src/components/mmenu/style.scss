@@ -1,4 +1,4 @@
-.mmenu{
+.mmenu {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -8,52 +8,89 @@
   backdrop-filter: blur(30px);
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
+  @include xlg-block {
+    left: 80px;
+  }
+  @include lg-block {
+    left: 48px;
+  }
+  @include sm-block {
+    left: 0;
+  }
 
-  &.active{
+  &.active {
     display: flex;
   }
 
-  &__close{
+  &__close {
     position: absolute;
     top: 25px;
     right: 35px;
     color: $txt;
     @include tr;
+    @include sm-block {
+      top: 10px;
+      right: 10px;
+    }
 
-    &:hover{
+    &:hover {
       color: $btn;
     }
 
-    svg{
-      path{
+    svg {
+      display: block;
+
+      path {
         fill: currentColor;
       }
     }
   }
 
-  &__wrap{
-    width: 778px;
+  &__wrap {
+    width: 100%;
+    max-width: 818px;
     margin: auto;
+    padding: 0 20px;
+    @include sm-block {
+      padding: 25px 10px;
+      height: 100%;
+    }
+
   }
 
-  &__top{
+  &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+    @include sm-block {
+      margin-bottom: 30px;
+    }
   }
 
-  &__title{
+  &__logo {
+    @include sm-block {
+      width: 207px;
+    }
+  }
+
+  &__title {
     color: $white;
     font-size: 25px;
     text-transform: uppercase;
+    @include sm-block {
+      display: none;
+    }
   }
 
-  &__list{
+  &__list {
     margin-bottom: 85px;
+    @include sm-block {
+      margin-bottom: 30px;
+    }
   }
 
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,34 +102,39 @@
     padding: 20px 0;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $btn;
     }
 
-    &:last-child{
+    &:last-child {
       border-bottom: 1px solid #474747;
     }
 
-    svg{
-      path{
+    svg {
+      path {
         fill: currentColor;
       }
     }
   }
 
-  &__bottom{
+  &__bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include sm-block {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+    }
   }
 
-  &__tel{
-    a{
+  &__tel {
+    a {
       color: $white;
       font-size: 20px;
-     @include tr;
+      @include tr;
 
-      &:hover{
+      &:hover {
         color: $btn;
       }
     }

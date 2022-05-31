@@ -16,15 +16,51 @@
     grid-template-columns: 130px 1fr auto;
     padding-left: 40px;
   }
+  @include lg-block{
+    --height: 44px;
+    left: 48px;
+    padding-left: 20px;
+    grid-template-columns: 77px 1fr;
+  }
+  @include sm-block{
+    --height: 40px;
+    left: 0;
+    padding-left: 0;
+    grid-template-columns: 120px 1fr;
+  }
+
 
   &__left{
     position: relative;
+
+    @include sm-block{
+        justify-content: flex-start;
+    }
+  }
+
+  &__mmenu-btn{
+    display: none;
+    width: 43px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+      display: block;
+    }
+
+    @include sm-block{
+      display: flex;
+    }
   }
 
   &__logo{
     position: absolute;
     top: 0;
     left: 0;
+    @include sm-block{
+      left: 43px;
+    }
   }
 
   &__center{
@@ -32,6 +68,9 @@
     align-self: center;
     @include xlg-block{
       padding: 0 40px;
+    }
+    @include lg-block{
+      display: none;
     }
   }
 
@@ -77,8 +116,22 @@
     }
   }
 
+  &__right{
+    @include lg-block{
+      display: flex;
+      justify-content: flex-end;
+    }
+    @include sm-block{
+      display: block;
+    }
+  }
+
   &__btns{
     display: flex;
+    @include sm-block{
+        display:grid;
+        grid-auto-flow: column;
+    }
   }
 
   &__btn{
@@ -91,6 +144,13 @@
     @include xlg-block{
       padding: 0 30px;
     }
+    @include lg-block{
+      padding: 0 50px;
+    }
+    @include sm-block{
+      padding: 0;
+    }
+
   }
 
   &__phone{
@@ -99,6 +159,9 @@
     @include xlg-block{
       font-size: 14px;
     }
+    @include sm-block{
+      font-size: 12px;
+    }
   }
 
   &__call{
@@ -106,6 +169,9 @@
     font-size: 20px;
     @include xlg-block{
       font-size: 14px;
+    }
+    @include sm-block{
+      font-size: 12px;
     }
   }
 

@@ -1,44 +1,89 @@
-.equipment{
+.equipment {
   padding-top: 70px;
   padding-bottom: 110px;
-  @include xlg-block{
+  @include xlg-block {
     padding-top: 50px;
     padding-bottom: 80px;
   }
-
-  &__title{
-    margin-bottom: 45px;
+  @include lg-block {
+    padding: 35px 0;
+  }
+  @include sm-block {
+    padding: 20px 0;
   }
 
-  &__list{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 25px;
-    margin-bottom: 85px;
-    @include xlg-block{
-        gap: 20px;
+  &__title {
+    margin-bottom: 45px;
+    @include lg-block {
+      margin-bottom: 25px;
+    }
+    @include sm-block {
+      margin-bottom: 20px;
     }
   }
 
-  &__bottom{
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 85px;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    @include sm-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+    }
+  }
+
+  &__bottom {
     display: flex;
     align-items: center;
     gap: 190px;
+    @include lg-block {
+      gap: 0;
+      justify-content: space-between;
+    }
+    @include sm-block {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  &__txt {
+    @include lg-block {
+      max-width: 447px;
+      font-size: 20px;
+    }
+    @include sm-block{
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    white-space: nowrap;
   }
 }
 
-.equipment-item{
+.equipment-item {
   background-color: #282a2e;
   position: relative;
   color: $white;
 
-  &:hover{
-    &:before{
+  &:hover {
+    &:before {
       opacity: 0.4;
     }
   }
 
-  &:before{
+  &:before {
     content: '';
     display: block;
     position: absolute;
@@ -53,52 +98,64 @@
     @include tr;
   }
 
-  &__wrap{
+  &__wrap {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
   }
 
-  &__img{
-    img{
+  &__img {
+    img {
       display: block;
     }
   }
 
-  &__bottom{
+  &__bottom {
     padding: 20px 20px 30px 20px;
+    @include sm-block {
+      padding: 20px 10px;
+    }
 
     display: flex;
     flex-direction: column;
-    @include xlg-block{
+    @include xlg-block {
       padding: 15px;
     }
   }
 
-  &__name{
+  &__name {
     font-size: 20px;
     margin-bottom: 15px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 14px;
       margin-bottom: 10px;
     }
+    @include sm-block {
+      font-size: 12px;
+    }
   }
 
-  &__desc{
+  &__desc {
     font-size: 14px;
     margin-bottom: 15px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 12px;
       margin-bottom: 10px;
     }
+    @include sm-block {
+      font-size: 8px;
+    }
   }
 
-  &__price{
+  &__price {
     color: $btn;
     font-size: 20px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 14px;
+    }
+    @include sm-block {
+      font-size: 10px;
     }
   }
 }

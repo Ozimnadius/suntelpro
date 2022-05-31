@@ -10,9 +10,29 @@
     grid-template-columns: 330px 1fr;
     gap: 155px;
   }
+  @include lg-block {
+    grid-template-columns: 310px 1fr;
+    gap: 40px;
+    padding: 40px 0;
+  }
+  @include sm-block {
+    padding: 40px 0;
+    grid-template-columns: 100%;
+    gap: 30px;
+  }
+
+  &__left{
+    @include sm-block{
+      order: 1;
+      max-width: 310px;
+    }
+  }
 
   &__title {
     margin-bottom: 15px;
+    @include lg-block {
+      margin-bottom: 10px;
+    }
   }
 
   &__txt {
@@ -52,7 +72,7 @@
 
   &__accept {
     margin-bottom: 40px;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 15px;
     }
   }
@@ -69,7 +89,7 @@
     align-items: center;
     justify-content: center;
     line-height: 1;
-    @include xlg-block{
+    @include xlg-block {
       width: 126px;
       height: 30px;
       font-size: 10px;
@@ -80,14 +100,25 @@
     color: $white;
     font-size: 32px;
     margin-bottom: 50px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 23px;
       margin-bottom: 30px;
+    }
+    @include lg-block {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    @include sm-block{
+      font-size: 20px;
+      margin-bottom: 20px;
     }
   }
 
   &__img {
     border-left: 24px solid $btn;
+    @include sm-block{
+      border-width: 10px;
+    }
 
     img {
       display: block;

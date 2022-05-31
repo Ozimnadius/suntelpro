@@ -5,23 +5,33 @@
   z-index: 100;
   top: 0;
   left: 0;
-  height: 100vh;
+  bottom: 0;
   width: 120px;
   background: linear-gradient(179.14deg, #BD8D4F 0%, #EAD092 24.76%, #B48148 49.67%, #EAD193 76.85%, #B48148 100%);
   border-right: var(--bdw) solid #c79a60;
-  @include xlg-block{
+  @include xlg-block {
     width: 80px;
     --bdw: 7px;
   }
+  @include lg-block {
+    --bdw: 4px;
+    width: 48px;
+  }
+  @include sm-block{
+    display: none;
+  }
 
 
-  &__wrap{
+  &__wrap {
     display: flex;
     flex-direction: column;
     margin-right: -9px;
     height: 100%;
-    @include xlg-block{
+    @include xlg-block {
       margin-right: -7px;
+    }
+    @include lg-block {
+      margin-right: -4px;
     }
   }
 
@@ -32,70 +42,93 @@
     height: 115px;
     border-bottom: 1px solid #ba8d53;
     padding-right: var(--bdw);
-    @include xlg-block{
+    @include xlg-block {
       height: 75px;
     }
+    @include lg-block{
+      height: 45px;
+    }
 
-    svg{
-      @include xlg-block{
+    svg {
+      @include xlg-block {
         width: 28px;
         height: 18px;
+      }
+      @include lg-block{
+        width: 17px;
+        height: 10px;
       }
     }
   }
 
-  &__center{
+  &__center {
     flex-grow: 1;
   }
 
-  &__item{
+  &__item {
     height: 50%;
     border-bottom: 1px solid #ba8d53;
     padding-right: var(--bdw);
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    &:last-child{
+
+    &:last-child {
       border: none;
     }
   }
 
-
-  &__email{
+  &__email {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
 
     color: #000000;
     font-size: 20px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 14px;
+    }
+    @include lg-block{
+      font-size: 12px;
     }
   }
 
-  &__logo{
-    @include xlg-block{
+  &__logo {
+    @include xlg-block {
       width: 12px;
     }
-    img{
+    @include lg-block{
+      width: 8px;
+    }
+
+    img {
       display: block;
     }
   }
 
-  &__socials{
+  &__socials {
     display: flex;
     flex-direction: column;
   }
 
-  &__social{
+  &__social {
     padding-right: var(--bdw);
     display: flex;
     align-items: center;
     justify-content: center;
     border-top: 1px solid #ba8d53;
     height: 115px;
-    @include xlg-block{
+    @include xlg-block {
       height: 75px;
+    }
+    @include lg-block{
+      height: 45px;
+    }
+
+    svg{
+      @include lg-block{
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

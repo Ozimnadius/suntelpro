@@ -18,6 +18,9 @@
       font-size: 13px;
       gap: 10px;
     }
+    @include sm-block{
+      font-size: 20px;
+    }
 
     &:hover {
       color: $btn;
@@ -27,6 +30,10 @@
       @include xlg-block{
         width: 23px;
         height: 23px;
+      }
+      @include sm-block{
+        width: 34px;
+        height: 34px;
       }
       path {
         fill: currentColor;

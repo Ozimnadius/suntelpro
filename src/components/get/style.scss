@@ -31,10 +31,18 @@
       gap: 15px;
       margin-bottom: 20px;
     }
+    @include lg-block {
+      max-width: 490px;
+    }
+    @include sm-block {
+      max-width: 235px;
+      grid-template-columns: 100%;
+      gap: 10px;
+    }
   }
 
   --fieldsHeight: 48px;
-  @include xlg-block{
+  @include xlg-block {
     --fieldsHeight: 33px;
   }
 
@@ -48,7 +56,7 @@
     color: $white;
     font-size: 20px;
     font-weight: 400;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 14px;
       padding: 0 15px;
     }
@@ -71,7 +79,7 @@
     position: relative;
     overflow: hidden;
     line-height: 1;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 8px;
 
     }
