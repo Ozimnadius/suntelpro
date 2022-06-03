@@ -452,7 +452,14 @@ textarea {
 }
 
 .footer__logo {
+  margin-top: -50px;
   margin-bottom: 30px;
+}
+
+.footer__logo a {
+  display: block;
+  width: 127px;
+  height: 129px;
 }
 
 .footer__desc {
@@ -2065,9 +2072,13 @@ textarea {
   }
 
   .footer__logo {
+    margin-top: -40px;
     margin-bottom: 20px;
-    width: 191px;
-    height: 47px;
+  }
+
+  .footer__logo a {
+    width: 91px;
+    height: 93px;
   }
 
   .footer__desc {
@@ -2656,6 +2667,11 @@ textarea {
     padding: 0 50px;
   }
 
+  .footer__logo a {
+    width: 86px;
+    height: 87px;
+  }
+
   .footer__addr {
     margin-bottom: 15px;
   }
@@ -3158,6 +3174,11 @@ textarea {
 
   .header__call {
     font-size: 12px;
+  }
+
+  .footer__logo a {
+    width: 83px;
+    height: 84px;
   }
 
   .footer__tel {
