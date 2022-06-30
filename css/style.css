@@ -1775,6 +1775,12 @@ textarea {
   padding: 15px;
 }
 
+.call__form.ok .call__ok {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .call__wrap {
   border: 1px solid #daa666;
   background-color: #222427;
@@ -1794,6 +1800,7 @@ textarea {
 
 .call__close {
   position: absolute;
+  z-index: 3;
   top: 15px;
   right: 15px;
   color: #ffffff;
@@ -1831,6 +1838,26 @@ textarea {
 
 .call__accept {
   margin-bottom: 30px;
+}
+
+.call__ok {
+  background-color: #222427;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  display: none;
 }
 
 .mmenu {

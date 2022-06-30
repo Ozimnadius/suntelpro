@@ -17,6 +17,12 @@
     margin: auto;
     background: linear-gradient(194.46deg, #35383C 0.44%, #191B1F 89.75%);
     padding: 15px;
+
+    &.ok{
+      .call__ok{
+        display: flex;
+      }
+    }
   }
 
   &__wrap{
@@ -32,6 +38,7 @@
 
   &__close{
     position: absolute;
+    z-index: 3;
     top: 15px;
     right: 15px;
     color: $white;
@@ -70,5 +77,23 @@
 
   &__accept{
     margin-bottom: 30px;
+  }
+
+  &__ok{
+    background-color: $bg;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+
+    font-size: 24px;
+
+    display: none;
   }
 }

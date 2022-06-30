@@ -1,5 +1,5 @@
 .call
-    form.call__form
+    form(action='/php/ajax.php' method='POST').call__form
         .call__wrap
             button(type='button').call__close
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,3 +20,5 @@
                 - var txt = "Даю согласие на обработку персональных данных";
                 include ../accept/index
             button(type='submit').feed__submit.hover-black Отправить
+            .call__ok.
+                Спасибо мы скоро с Вами свяжемся!
