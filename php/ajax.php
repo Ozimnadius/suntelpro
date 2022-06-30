@@ -30,6 +30,11 @@ function sendMail()
                 Email: <?= $_POST['email'] ?>
             </td>
         </tr>
+        <tr>
+            <td>
+                Оборудование: <?= $_POST['msg'] ?>
+            </td>
+        </tr>
     </table>
     <?
     $html = ob_get_contents();
@@ -40,8 +45,8 @@ function sendMail()
 
     try {
         //Recipients
-        $mail->setFrom('info@suntelpro.ru', 'Suntelpro');
-        $mail->addAddress('mikhail-seregin@yandex.ru', 'БПЦ');
+        $mail->setFrom('info@intmedgroup.ru', 'Suntelpro');
+        $mail->addAddress('bulkina@intmedgroup.ru', 'Intmedgroup');
 
         //Content
         $mail->isHTML(true);
